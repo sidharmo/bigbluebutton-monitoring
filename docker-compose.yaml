@@ -2,11 +2,11 @@ version: '3.2'
 services:
   bbb-exporter:
     container_name: "bbb-monitoring"
-    image: greenstatic/bigbluebutton-monitoring:${BBB_MONITORING_VERSION:-latest}
+    image: unsilmeet/monitoring:v2
     ports:
     - "127.0.0.1:4000:5000"
     environment:
-    - "API_BASE_URL=<TODO: YOUR API URL>"  # example: https://bbb.example.com/bigbluebutton/api/"
+    - "API_BASE_URL=https://meet.unsil.ac.id/bigbluebutton/api/"  # example: https://bbb.example.com/bigbluebutton/api/"
     #- "DEBUG=true"
     env_file:
     # Within this file (secrets.env) which needs to be located in the same directory
